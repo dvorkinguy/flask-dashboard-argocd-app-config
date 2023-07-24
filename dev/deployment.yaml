@@ -5,15 +5,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: flask-dashboardp
+      app: myapp
   replicas: 2
   template:
     metadata:
       labels:
-        app: flask-dashboard
+        app: myapp
     spec:
       containers:
-      - name: flask-dashboard
+      - name: myapp
         image: dvorkinguy/flask-dashboard:29
         ports:
         - containerPort: 5000

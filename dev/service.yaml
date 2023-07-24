@@ -4,9 +4,9 @@ metadata:
   name: flask-dashboard-service
 spec:
   selector:
-    app: flask-dashboard
+    app: myapp
   ports:
   - port: 8080
     protocol: TCP
-    targetPort: 5000
+    targetPort: 8080
   
