@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-2
+  name: flask-dashboard
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: flask-dashboardp
   replicas: 2
   template:
     metadata:
       labels:
-        app: myapp
+        app: flask-dashboard
     spec:
       containers:
-      - name: myapp
-        image: nanajanashia/argocd-app:1.0
+      - name: flask-dashboard
+        image: dvorkinguy/flask-dashboard:29
         ports:
-        - containerPort: 8080
+        - containerPort: 5000
